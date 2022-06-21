@@ -7,7 +7,7 @@ My learning record of Android development.
 * ValueAnimator
 * ObjectAnimator
 > 含对象属性
-
+---
 ### 图片选择器
 #### 推荐使用的库
 1. [__PictureSelector__](https://github.com/LuckSiege/PictureSelector)
