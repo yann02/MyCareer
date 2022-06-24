@@ -4,6 +4,7 @@ My learning record of Android development.
 ## 目录
 * [Kotlin](#Kotlin)
 * [UI](#UI)
+* [How to write README.md]
 ---
   
 ## Kotlin
@@ -61,3 +62,7 @@ class LatestNewsActivity : AppCompatActivity() {
 ### 字符串资源引用
 * 省略号
 > …
+  
+## How to write README.md
+[官方文档]([How to write README.md](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
+> 有中文版
