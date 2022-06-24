@@ -1,5 +1,5 @@
 # MyCareer
-My learning record of Android development.
+My learning record for Android development.
 
 ## Table of Contents
 * [Kotlin](#Kotlin)
