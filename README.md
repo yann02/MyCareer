@@ -64,5 +64,5 @@ class LatestNewsActivity : AppCompatActivity() {
 > …
   
 ## How to write README
-[官方文档]([How to write README.md](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
+[官方文档](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
 > 有中文版
