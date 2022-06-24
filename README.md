@@ -4,7 +4,7 @@ My learning record of Android development.
 ## 目录
 * [Kotlin](#Kotlin)
 * [UI](#UI)
-* [How to write README.md]
+* [How to write README.md](#How to write README.md)
 ---
   
 ## Kotlin
