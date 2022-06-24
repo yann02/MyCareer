@@ -4,7 +4,7 @@ My learning record of Android development.
 ## Table of Contents
 * [Kotlin](#Kotlin)
 * [UI](#UI)
-* [How to write README.md](#How-to-write-README.md)
+* [How to write README.md](#how-to-write-readme.md)
 ---
   
 ## Kotlin
