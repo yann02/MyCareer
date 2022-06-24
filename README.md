@@ -35,7 +35,7 @@ class LatestNewsActivity : AppCompatActivity() {
     }
 }
 ```
-
+---  
 ## UI 
 ### 动画
 #### Property Animation
