@@ -11,7 +11,7 @@ My learning record of Android development.
 #### Collect Flow
 ##### 关于在视图组件（wether activity or fragment）中收集Flow的注意事项
 * 要在onCreate生命周期的回调方法中定义收集流  
-> 如果在其他回调方法中定义的话可能会因为用户离开当前页面再返回时，导致重复定义流的收集。比如我们在Afragment的onViewCreated方法中定义了流的收集方法，当我们从AFragment跳转到BFragment,再从BFragment返回AFragment，这时，AFragment的onViewCreated方法会被再次被系统调用，导致重复执行了流的收集，这样，当流emit一条数据时，collect方法会收到两次数据（我这里是使用Navigation component在fragment直接导航，使用它从AFragment导航到BFragment时，AFragment的视图会被销毁,触发onDestroyView方法(<font color="FF0000">Navigation会缓存带有id标识的组件的状态</font>)，再从BFragment返回AFragment时，onCreateView方法会被调用（<font color="FF0000">恢复带有id标识组件的状态</font>））
+> 如果在其他回调方法中定义的话可能会因为用户离开当前页面再返回时，导致重复定义流的收集。比如我们在Afragment的onViewCreated方法中定义了流的收集方法，当我们从AFragment跳转到BFragment,再从BFragment返回AFragment，这时，AFragment的onViewCreated方法会被再次被系统调用，导致重复执行了流的收集，这样，当流emit一条数据时，collect方法会收到两次数据（我这里是使用Navigation component在fragment直接导航，使用它从AFragment导航到BFragment时，AFragment的视图会被销毁,触发onDestroyView方法(**Navigation会缓存带有id标识的组件的状态**)，再从BFragment返回AFragment时，onCreateView方法会被调用（**恢复带有id标识组件的状态**））
 * 使用repeatOnLifecycle API收集流，确保视图的生命周期安全，不会导致视图引用泄漏  
 我这里引用一个[_安卓开发官网的用例_](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow)：
 ```Kotlin
