@@ -8,13 +8,12 @@ My learning record for Android development.
 ---
   
 ## Kotlin
-### Flow(StateFlow and SharedFlow)
-#### Collect Flow
-##### 关于在视图组件（wether activity or fragment）中收集Flow的注意事项
-* 要在onCreate生命周期的回调方法中定义收集流  
-> 如果在其他回调方法中定义的话可能会因为用户离开当前页面再返回时，导致重复定义流的收集。比如我们在Afragment的onViewCreated方法中定义了流的收集方法，当我们从AFragment跳转到BFragment,再从BFragment返回AFragment，这时，AFragment的onViewCreated方法会被再次被系统调用，导致重复执行了流的收集，这样，当流emit一条数据时，collect方法会收到两次数据（我这里是使用Navigation component在fragment直接导航，使用它从AFragment导航到BFragment时，AFragment的视图会被销毁,触发onDestroyView方法(**Navigation会缓存带有id标识的组件的状态**)，再从BFragment返回AFragment时，onCreateView方法会被调用（**恢复带有id标识组件的状态**））
-* 使用repeatOnLifecycle API收集流，确保视图的生命周期安全，不会导致视图引用泄漏  
-我这里引用一个[_安卓开发官网的用例_](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow)：
+### Flow
+> 流是冷的，只有在收集（如：collect方法）的时候才会接收值和执行上游流的操作（如有有的话，比如map等转换操作）  
+
+* 流的收集
+> 流的收集要确保在组件（Activity or Fragment）生命周期的活动状态内
+* 在activity中收集
 ```Kotlin
 class LatestNewsActivity : AppCompatActivity() {
     private val latestNewsViewModel = // getViewModel()
@@ -41,6 +40,87 @@ class LatestNewsActivity : AppCompatActivity() {
     }
 }
 ```
+* 在fragment中收集[[参考](https://developer.android.com/topic/libraries/architecture/coroutines)]
+```Kotlin
+class MyFragment : Fragment() {
+
+    val viewModel: MyViewModel by viewModel()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Create a new coroutine in the lifecycleScope
+        viewLifecycleOwner.lifecycleScope.launch {
+            // repeatOnLifecycle launches the block in a new coroutine every time the
+            // lifecycle is in the STARTED state (or above) and cancels it when it's STOPPED.
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                // Trigger the flow and start listening for values.
+                // This happens when lifecycle is STARTED and stops
+                // collecting when the lifecycle is STOPPED
+                viewModel.someDataFlow.collect {
+                    // Process item
+                }
+            }
+        }
+    }
+}
+```
+> Cause:在fragment中是用viewLifecycleOwner创建可感知组件生命周期的收集作用域，而不是像Activity中那样用lifecycleScope直接创建（我们从上面的例子可以看到，activity是在oncreate中收集的，而fragment是在onViewCreated中收集的），这样的话，当fragment视图被销毁时，该协程作用域也会跟着view一起被取消。这样做的好处在于避免重复创建协程。比如，当我们旋转屏幕，或者我们使用navigation Component跳转到新的fragment页面再返回时，由于重新创建视图而导致的协程构建被再次执行，这样会导致一个收集器会同时收集到重复的一个事件。
+>  
+> 如果要使用lifecycleScope在fragment中创建协程作用域的话，可以在onCreate方法中使用，也能避免由于fragment生命周期的改变导致协程作用域被多次创建，但是不建议这么做。
+>  
+> 使用生命周期感知的协程收收集器，可以有效避免视图内存泄漏的问题。
+#### StateFlow
+> 需要设置一个初始值
+>  
+> 支持跟视图绑定，要记得给binding设置生命周期，否则当StateFlow值发生改变时，绑定到视图的值也不会改变
+* 在activity中绑定
+```Kotlin
+class ViewModelActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        // Inflate view and obtain an instance of the binding class.
+        val binding: UserBinding = DataBindingUtil.setContentView(this, R.layout.user)
+
+        // Specify the current activity as the lifecycle owner.
+        binding.lifecycleOwner = this
+    }
+}
+```
+* 在fragment中绑定
+```Kotlin
+binding.lifecycleOwner = viewLifecycleOwner
+```
+#### SharedFlow
+> 没有初始值  
+
+* 发送一个值
+> 要在协程作用域中发送值
+```Kotlin
+private val _mValueFour = MutableSharedFlow<Int>(0)
+val mValueFour: SharedFlow<Int> = _mValueFour
+fun increaseFourValue() {
+    Log.d("wyy", "increaseFourValue")
+    viewModelScope.launch {
+        _mValueFour.emit(1)
+    }
+}
+```
+* replay
+> 缓存指定数量的数据，用于设置对新创建的收起器发送最多为指定数量的数据，改配置只会对新的收集器起作用。一般设置为0，不需要给新创建的收集器发送已经触发过的数据。如果需要发送最后一个数据给收集器的话，可以考虑使用StateFlow。
+
+### Channel
+* 发送一个值
+> 要在协程作用域中发送值,这一点，跟SharedFlow一样
+```Kotlin
+private val _mChannelValue = Channel<Int>()
+val mChannelValue = _mChannelValue.receiveAsFlow()
+fun increaseChannelValue() {
+    viewModelScope.launch {
+        _mChannelValue.send(1)
+    }
+}
+```
+> Note:将通道转为流使用  
 ---  
 ## UI 
 ### 动画
