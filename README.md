@@ -120,6 +120,14 @@ fun increaseChannelValue() {
 
 ### LiveData
 > 在Fragment中，当用户使用navigation组件导航到新的Fragment组件，然后再返回时，observe方法会再触发获取最新值的事件
+
+### 几个数据结构的比较
+类型 | 再次返回Activity/fragment时，是否会再次触发数据采集
+:---: | :---:
+Flow | - [ ]
+StateFlow | - [x]
+SharedFlow | - [ ]
+LiveData | - [x]
 ---  
 ## UI 
 ### 动画
