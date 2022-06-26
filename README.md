@@ -128,8 +128,6 @@ Flow | No
 StateFlow | Yes
 SharedFlow | No
 LiveData | Yes
-- [ ] No
-- [x] Yes
 ---  
 ## UI 
 ### 动画
