@@ -124,10 +124,11 @@ fun increaseChannelValue() {
 ### 几个数据结构的比较
 类型 | 再次返回Activity/fragment时，是否会再次触发数据采集
 :---: | :---:
-Flow | - [ ]
-StateFlow | - [x]
-SharedFlow | - [ ]
-LiveData | - [x]
+Flow | - [ ] No
+StateFlow | - [x] Yes
+SharedFlow | - [ ] No
+LiveData | - [x] Yes
+
 ---  
 ## UI 
 ### 动画
