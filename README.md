@@ -119,7 +119,7 @@ fun increaseChannelValue() {
 > Note:将通道转为流使用  
 
 ### LiveData
-> 在用户使用navigation组件导航到新的组件，然后再返回时，observe方法会触发一次获取最新值的事件
+> 在Fragment中，当用户使用navigation组件导航到新的Fragment组件，然后再返回时，observe方法会再触发获取最新值的事件
 ---  
 ## UI 
 ### 动画
