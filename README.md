@@ -79,7 +79,7 @@ class MyFragment : Fragment() {
 > 如果要使用lifecycleScope在fragment中创建协程作用域的话，可以在onCreate方法中使用，也能避免由于fragment生命周期的改变导致协程作用域被多次创建，但是不建议这么做。
 >  
 > 使用生命周期感知的协程收收集器，可以有效避免视图内存泄漏的问题。
-#### StateFlow[返回顶部](#Table-of-Contents)
+#### StateFlow
 > 需要设置一个初始值
 >  
 > 支持跟视图绑定，要记得给binding设置生命周期，否则当StateFlow值发生改变时，绑定到视图的值也不会改变
