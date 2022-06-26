@@ -2,9 +2,18 @@
 My learning record for Android development.
 
 ## Table of Contents
-* [Kotlin](#Kotlin)
-* [UI](#UI)
-* [How to write README](#how-to-write-readme)
+- [Kotlin](#Kotlin)
+  - [Flow](#flow)
+    - [StateFlow](#StateFlow)
+    - [SharedFlow](#SharedFlow)
+  - [Channel](#channel)
+- [UI](#UI)
+  - [动画](#动画)
+    - [Property Animation](#Property-Animation)
+    - [View Animation](#View_Animation)
+  - [图片选择器](#图片选择器)
+  - [字符串资源引用](#字符串资源引用)
+- [How to write README](#how-to-write-readme)
 ---
   
 ## Kotlin
