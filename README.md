@@ -3,7 +3,7 @@ My learning record for Android development.
   
 ---
   
-## Kotlin
+## 数据结构
 ### Flow
 > 流是冷的，只有在收集（如：collect方法）的时候才会接收值和执行上游流的操作（如有有的话，比如map等转换操作）  
 
@@ -117,6 +117,9 @@ fun increaseChannelValue() {
 }
 ```
 > Note:将通道转为流使用  
+
+### LiveData
+> 在用户使用navigation组件导航到新的组件，然后再返回时，observe方法会触发一次获取最新值的事件
 ---  
 ## UI 
 ### 动画
