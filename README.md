@@ -4,7 +4,8 @@ My learning record for Android development.
 ---
   
 ## 数据结构
-### Flow
+### 可感知组件生命周期的数据结构
+#### Flow
 > 流是冷的，只有在收集（如：collect方法）的时候才会接收值和执行上游流的操作（如有有的话，比如map等转换操作）  
 
 * 流的收集
@@ -66,7 +67,7 @@ class MyFragment : Fragment() {
 > 如果要使用lifecycleScope在fragment中创建协程作用域的话，可以在onCreate方法中使用，也能避免由于fragment生命周期的改变导致协程作用域被多次创建，但是不建议这么做。
 >  
 > 使用生命周期感知的协程收收集器，可以有效避免视图内存泄漏的问题。
-#### StateFlow
+##### StateFlow
 > 需要设置一个初始值
 >  
 > 支持跟视图绑定，要记得给binding设置生命周期，否则当StateFlow值发生改变时，绑定到视图的值也不会改变
@@ -86,7 +87,7 @@ class ViewModelActivity : AppCompatActivity() {
 ```Kotlin
 binding.lifecycleOwner = viewLifecycleOwner
 ```
-#### SharedFlow
+##### SharedFlow
 > 没有初始值  
 
 * 发送一个值
@@ -104,7 +105,7 @@ fun increaseFourValue() {
 * replay
 > 缓存指定数量的数据，用于设置对新创建的收起器发送最多为指定数量的数据，改配置只会对新的收集器起作用。一般设置为0，不需要给新创建的收集器发送已经触发过的数据。如果需要发送最后一个数据给收集器的话，可以考虑使用StateFlow。
 
-### Channel
+#### Channel
 * 发送一个值
 > 要在协程作用域中发送值,这一点，跟SharedFlow一样
 ```Kotlin
@@ -118,10 +119,10 @@ fun increaseChannelValue() {
 ```
 > Note:将通道转为流使用  
 
-### LiveData
+#### LiveData
 > 在Fragment中，当用户使用navigation组件导航到新的Fragment组件，然后再返回时，observe方法会再触发获取最新值的事件
 
-### 几个数据结构的比较
+#### 几个数据结构的比较
 类型 | 再次返回Activity/fragment时，是否会再次触发数据采集
 :---: | :---:
 Flow | No
@@ -129,6 +130,15 @@ StateFlow | Yes
 SharedFlow | No
 LiveData | Yes
 ---  
+### 泛型
+#### 标记符的规范使用
+标记符 | 应用场景
+:--- | :---
+T(Type) | 类
+E(Element) | 集合元素
+K(Key) | 键
+V(Value) | 值  
+---
 ## UI 
 ### 动画
 #### Property Animation
