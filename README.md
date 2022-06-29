@@ -169,6 +169,7 @@ V(Value) | 值
 > …
   
 ## How to write README
-* README.md文件编写教程[Github Codes](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
-> 有中文版  
+> README.md文件编写教程  
+* [Github Codes教程（有中文版）](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
+> [推荐教程](https://github.com/xcmy/GitHub-Flavored-Markdown/blob/master/README.md)
 * [案例](https://github.com/jwasham/coding-interview-university)
