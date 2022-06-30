@@ -141,7 +141,7 @@ LiveData | Yes
 > 逆变：写入数据，可用于定义方法的形参（调用方法时我们传的参数称为实参）  
   
 #### ?号和星投影
-* Kotlin中的通配符 <*> 等效于<out Any>  
+* Kotlin中的通配符 <*> 等效于 '<out Any>'
 * Java中的通配符 <?> 等效于 <? extends Object>
 * Java中的通配符 <?> 等效于Kotlin中的 <*>
 
