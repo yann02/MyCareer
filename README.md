@@ -133,7 +133,7 @@ LiveData | Yes
 ### 泛型
 > 协变和逆变应用的时候需要遵循 PECS（Producer-Extends, Consumer-Super）原则，即 ? extends 或者 out 作为生产者，? super 或者 in 作为消费者。遵循这个原则的好处是，可以在编译阶段保> 证代码安全，减少未知错误的发生。
 #### Kotlin和Java中的协变和逆变  
-泛化类型 | Kotlin | Java | 添加(写)数据 | 读取数据 | 用于定义的界限
+泛化类型 | Kotlin | Java | 添加(写)数据 | 读取数据 | 用于定义类型的界限
 :---: | :---: | :---: | :---: | :---: | :---:
 协变 | out | ? extends | 否 | 是 | 下限
 逆变 | in | ? super | 是 | 否 | 上限  
