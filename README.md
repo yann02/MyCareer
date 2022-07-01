@@ -177,7 +177,7 @@ V(Value) | 值
 ---
 ### View的监听
 #### 监听View的大小变化
-> [stackoverflow](https://stackoverflow.com/questions/4174613/how-to-detect-a-layout-resize)
+> 参考[stackoverflow](https://stackoverflow.com/questions/4174613/how-to-detect-a-layout-resize)
 >
 > 使用场景：比如微信的聊天窗口，当输入框因为内容增加导致高度上升，这时候就需要根据消息列表的显示数量来判断是否需要重新将消息列表滚动到底部，避免由于输入框增高导致消息列表组件高度变小，这样就导致看不到最新的消息内容了。
 >
