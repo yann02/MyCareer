@@ -191,6 +191,8 @@ V(Value) | 值
 #### 添加编译期参数
 作用：  
 1. 解决代码警告的问题  
+
+  
 在应用的app.gradle->android中配置，如下所示：  
 ```Groovy
 android {
@@ -202,7 +204,7 @@ android {
     }
 }
 ```  
-  
+> "-Xopt-in=kotlin.RequiresOptIn"在这里就是添加的编译期参数
 
 ## How to write README
 > README.md文件编写教程  
