@@ -186,6 +186,24 @@ V(Value) | 值
 >
 > 场景解决方案：当输入框的高度发生变化时，滚动消息列表到底部。  
 ---
+## AS编译
+### Kotlin
+#### 添加编译期参数
+作用：  
+1. 解决代码警告的问题  
+在应用的app.gradle->android中配置，如下所示：  
+```Groovy
+android {
+    kotlinOptions {
+        ...其他配置
+        freeCompilerArgs += [
+                "-Xopt-in=kotlin.RequiresOptIn",
+        ]
+    }
+}
+```  
+  
+
 ## How to write README
 > README.md文件编写教程  
 * [Github Codes教程（有中文版）](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
