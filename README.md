@@ -212,6 +212,13 @@ android {
 ```  
 > "-Xopt-in=kotlin.RequiresOptIn"在这里就是添加的编译期参数
 
+## 音频和视频
+### 录音
+#### 使用的库
+- [_Android-Wave-Recorder_](https://github.com/squti/Android-Wave-Recorder)
+- [_ZlwAudioRecorder_](https://github.com/zhaolewei/ZlwAudioRecorder)
+> 两个库都支持音量大小的回调，Android-Wave-Recorder库的waveRecorder.onAmplitudeListener用于接收音量的回调。Android-Wave-Recorder库的使用感觉更简单一些。
+
 ## How to write README
 > README.md文件编写教程  
 * [Github Codes教程（有中文版）](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
