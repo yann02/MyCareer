@@ -185,7 +185,7 @@ V(Value) | 值
 > 使用场景：比如微信的聊天窗口，当输入框因为内容增加导致高度上升，这时候就需要根据消息列表的显示数量来判断是否需要重新将消息列表滚动到底部，避免由于输入框增高导致消息列表组件高度变小，这样就导致看不到最新的消息内容了。
 >
 > 场景解决方案：当输入框的高度发生变化时，滚动消息列表到底部。  
-
+---  
 ### RecyclerView
 #### 常用的第三方库
 - [_BaseRecyclerViewAdapterHelper_](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
