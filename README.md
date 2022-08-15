@@ -189,6 +189,7 @@ V(Value) | 值
 ### RecyclerView
 #### 常用的第三方库
 - [_BaseRecyclerViewAdapterHelper_](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
+> 注意：adapter支持item和item内子View的点击和长按事件，当在设置item内子View的点击事件时，如果我们还监听了item的长按事件，则长按item内的对应子View无法触发长按事件，应该同时也设置item内子View的长按事件。  
 #### Adapter  
 - [_当列表数据变化时，使用adapter更新列表界面_](https://stackoverflow.com/questions/31367599/how-to-update-recyclerview-adapter-data/48959184#48959184)
 ---
