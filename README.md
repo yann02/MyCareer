@@ -220,6 +220,10 @@ android {
 - [_ZlwAudioRecorder_](https://github.com/zhaolewei/ZlwAudioRecorder)
 > 两个库都支持音量大小的回调，Android-Wave-Recorder库的waveRecorder.onAmplitudeListener用于接收音量的回调。Android-Wave-Recorder库的使用感觉更简单一些。
 
+## 网络传输
+### 文件下载
+- [_FileDownloader_](https://github.com/lingochamp/FileDownloader)
+
 ## 开发工具
 ### AS
 #### 下载
