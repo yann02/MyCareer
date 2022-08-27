@@ -9,7 +9,16 @@
 > Handler的[removeCallbacksAndMessages](https://developer.android.com/reference/android/os/Handler#removeCallbacksAndMessages(java.lang.Object))方法
 > 移除所有的回调和消息实体类。  
 - Handler
-- AsyncTask
+  - Send version
+    - sendEmptyMessage(int)
+    - sendMessage(Message)
+    - sendMessageAtTime(Message, long)
+    - sendMessageDelayed(Message, long)
+  - Post version
+    - post(Runnable)
+    - postAtTime(java.lang.Runnable, long)
+    - postDelayed(Runnable, Object, long)
+- [AsyncTask](https://developer.android.com/reference/android/os/AsyncTask)
   
 > [安卓官方对应用进程和线程的说明](https://developer.android.com/guide/components/processes-and-threads#Processes)
 
