@@ -192,6 +192,12 @@ V(Value) | 值
 > 注意：adapter支持item和item内子View的点击和长按事件，当在设置item内子View的点击事件时，如果我们还监听了item的长按事件，则长按item内的对应子View无法触发长按事件，应该同时也设置item内子View的长按事件。  
 #### Adapter  
 - [_当列表数据变化时，使用adapter更新列表界面_](https://stackoverflow.com/questions/31367599/how-to-update-recyclerview-adapter-data/48959184#48959184)
+
+### 布局
+#### 设置布局的方向
+    layoutDirection  
+> 默认是从左到右，也可以设置[从右到左](https://stackoverflow.com/questions/21613855/how-to-design-right-to-left-linear-layout)
+
 ---
 ## AS编译
 ### Kotlin
