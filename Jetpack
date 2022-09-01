@@ -1,0 +1,4 @@
+# Jetpack
+## ViewModel
+### ViewModel生命周期相关
+> ViewModel在设备配置（如：屏幕旋转和系统语言变更）发生改变时，不会销毁。
