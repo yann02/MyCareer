@@ -42,7 +42,7 @@ android {
     //...
 }
 ```   
-## 分析Sample
+## 分析上面的Sample
 > 上面的样例设置了只对release编译类型的生成包做处理，包括常用的如何获取应用打包时生成Apk名字常用到的关键字段信息  
 > 获取应用包名：`defaultConfig.applicationId`  
 > 获取应用版本名称：有两种方式  
