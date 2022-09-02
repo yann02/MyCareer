@@ -9,6 +9,17 @@ android {
         versionName "V1.0.1"
         //...
     }
+    productFlavors {
+        free {
+            dimension "role"
+            //...
+        }
+        vip {
+            dimension "role"
+            //...
+        }
+        //...
+    }
     //...
     android.applicationVariants.all { variant ->
         def createTime = new Date().format("YYYY-MM-dd_HH.mm")
