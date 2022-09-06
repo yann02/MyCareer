@@ -6,3 +6,7 @@
 ### Image
 #### 加载网络图片
 [stack overflow](https://stackoverflow.com/questions/58594262/how-do-i-load-url-into-image-into-drawimage-in-compose-ui-android-jetpack)
+## Material Design
+### 获取组件大小
+#### TopAppBar默认高度
+> 56dp
