@@ -235,6 +235,12 @@ android {
 #### 下载
 [__下载地址__](https://developer.android.com/studio/archive)
 
+## 查看应用信息
+### 使用LibChecker应用查看应用信息
+> LibChecker可在酷安应用商城下载，效果如下所示：  
+[](images/wechat_app_config.jpg)  
+
+
 ## How to write README
 > README.md文件编写教程  
 * [Github Codes教程（有中文版）](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
