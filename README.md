@@ -239,7 +239,7 @@ android {
 ### 使用LibChecker应用查看应用信息
 > LibChecker可在酷安应用商城下载，效果如下所示：  
   
-<img src="images/wechat_app_config.jpg" width="350" alt="微信应用信息">  
+<img src="images/wechat_app_config.jpg" width="550" alt="微信应用信息">  
 
 
 ## How to write README
