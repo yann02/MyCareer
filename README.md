@@ -238,7 +238,7 @@ android {
 ## 查看应用信息
 ### 使用LibChecker应用查看应用信息
 > LibChecker可在酷安应用商城下载，效果如下所示：  
-[](images/wechat_app_config.jpg)  
+![微信应用信息](images/wechat_app_config.jpg)  
 
 
 ## How to write README
