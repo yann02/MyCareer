@@ -219,6 +219,9 @@ android {
 ```  
 > "-Xopt-in=kotlin.RequiresOptIn"在这里就是添加的编译期参数
 
+#### AS控制台输出乱码
+[解决AS build报错乱码问题](https://blog.csdn.net/weixin_37826412/article/details/105555837)
+
 ## 音频和视频
 ### 录音
 #### 使用的库
