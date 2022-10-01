@@ -251,3 +251,4 @@ android {
 * [Github Codes教程（有中文版）](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)  
 * [推荐教程](https://github.com/xcmy/GitHub-Flavored-Markdown/blob/master/README.md)
 * [案例](https://github.com/jwasham/coding-interview-university)
+* [参考如何写项目包结构](https://github.com/square/radiography)
