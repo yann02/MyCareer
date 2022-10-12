@@ -7,8 +7,8 @@
 - 底部导航栏
 
 #### 将编写的内容填充到系统栏
-'WindowCompat.setDecorFitsSystemWindows(window, false)'  
-  
+`WindowCompat.setDecorFitsSystemWindows(window, false)`  
+    
 > 如下所示  
 
   
