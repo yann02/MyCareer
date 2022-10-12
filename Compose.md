@@ -33,9 +33,11 @@ class MainActivity : ComponentActivity() {
 </style>
 ```
 
-> 使用上面的主题需要依赖库  
-'implementation "com.google.android.material:material:1.7.0-rc01"'
+> 使用上面的主题需要依赖库   
 
+  
+`implementation "com.google.android.material:material:1.7.0-rc01"` 
+  
 > 设置以上主题可能会有错误提示（如果你的应用配置的最小版本低于Api23的话），根据提示修改即可。
 > 此时我们顶部的内容会跟状态栏的状态信息重叠显示
 
