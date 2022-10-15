@@ -252,3 +252,8 @@ android {
 * [推荐教程](https://github.com/xcmy/GitHub-Flavored-Markdown/blob/master/README.md)
 * [案例](https://github.com/jwasham/coding-interview-university)
 * [参考如何写项目包结构](https://github.com/square/radiography)
+
+## 常用工具
+### Gif录屏
+- [LICEcap官网(实测好用)](https://www.cockos.com/licecap/)
+- [5款免费好用的Gif录屏神器(简书博客)](https://www.jianshu.com/p/796bdb40fba9)
