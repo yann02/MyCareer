@@ -257,3 +257,6 @@ android {
 ### Gif录屏
 - [LICEcap官网(实测好用)](https://www.cockos.com/licecap/)
 - [5款免费好用的Gif录屏神器(简书博客)](https://www.jianshu.com/p/796bdb40fba9)
+
+### 远程访问服务器
+- [todesk 下载地址](https://www.todesk.com/download.html)
