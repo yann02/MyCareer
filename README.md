@@ -260,3 +260,7 @@ android {
 
 ### 远程访问服务器
 - [todesk 下载地址](https://www.todesk.com/download.html)
+
+## 教程
+- [Notifications codelab](https://developer.android.com/codelabs/advanced-android-kotlin-training-notifications#0)
+- [widgets udacity](https://learn.udacity.com/courses/ud855/lessons/c8efbed7-9c34-4d4f-bccc-ebd92d07a04f/concepts/f8a604be-06d3-4637-98ce-6f9da05fe08a)
