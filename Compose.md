@@ -69,3 +69,8 @@ class MainActivity : ComponentActivity() {
   
 - [教程](https://google.github.io/accompanist/)  
 - [Github](https://github.com/google/accompanist)
+
+
+## 系统悬浮窗
+- [使用LifecycleService实现](https://qiita.com/tsumuchan/items/92a1576dccb0bab4baf6)
+- [使用Service实现](https://gist.github.com/handstandsam/6ecff2f39da72c0b38c07aa80bbb5a2f)
