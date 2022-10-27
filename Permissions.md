@@ -1,7 +1,7 @@
 # 权限相关
 ## 授权系统悬浮窗
 > 在Activity中调用以下代码  
-> 1.判断应用是否有悬浮窗权限  
+> 1.判断应用是否有悬浮窗权限(Android M之前的系统版本不需要权限申请)  
   
 ```Kotlin
 Settings.canDrawOverlays(baseContext)
