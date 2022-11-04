@@ -264,6 +264,18 @@ android {
 ### 系统签名
 [参考 安卓开机自启动app](https://blog.csdn.net/weixin_42582542/article/details/121246646)
 
+## 跳转
+### 跳转到系统设置页面
+```Kotlin
+val launcher = rememberLauncherForActivityResult(contract = ActivityResultContracts.StartActivityForResult(), onResult = {})
+try {
+    val uri = Uri.parse("package:${BuildConfig.APPLICATION_ID}")
+    launcher.launch(Intent(ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION, uri))
+} catch (e: Exception) {
+    launcher.launch(Intent(ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION))
+}
+```
+
 ## 教程
 - [Notifications codelab](https://developer.android.com/codelabs/advanced-android-kotlin-training-notifications#0)
 - [widgets udacity](https://learn.udacity.com/courses/ud855/lessons/c8efbed7-9c34-4d4f-bccc-ebd92d07a04f/concepts/f8a604be-06d3-4637-98ce-6f9da05fe08a)
