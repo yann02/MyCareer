@@ -276,6 +276,10 @@ try {
 }
 ```
 
+## 设备信息
+### 手机号获取
+[How to get the phone number programmatically in Android](https://en.proft.me/2017/11/27/how-get-phone-number-programmatically-android/)
+
 ## 教程
 - [Notifications codelab](https://developer.android.com/codelabs/advanced-android-kotlin-training-notifications#0)
 - [widgets udacity](https://learn.udacity.com/courses/ud855/lessons/c8efbed7-9c34-4d4f-bccc-ebd92d07a04f/concepts/f8a604be-06d3-4637-98ce-6f9da05fe08a)
