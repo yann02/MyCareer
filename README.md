@@ -278,6 +278,10 @@ try {
 
 ## 设备信息
 ### 手机号获取
+> android从5.1开始支持多张sim卡 [官方说明](https://developer.android.com/about/versions/lollipop/android-5.1#multisim)  
+
+`示例`  
+  
 [How to get the phone number programmatically in Android](https://en.proft.me/2017/11/27/how-get-phone-number-programmatically-android/)
 
 ## 教程
