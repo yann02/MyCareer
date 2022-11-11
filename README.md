@@ -282,7 +282,20 @@ try {
 
 `示例`  
   
-[How to get the phone number programmatically in Android](https://en.proft.me/2017/11/27/how-get-phone-number-programmatically-android/)
+[How to get the phone number programmatically in Android](https://en.proft.me/2017/11/27/how-get-phone-number-programmatically-android/)  
+  
+`关键代码块`
+```Java
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+    List<SubscriptionInfo> subscription = SubscriptionManager.from(getApplicationContext()).getActiveSubscriptionInfoList();
+    for (int i = 0; i < subscription.size(); i++) {
+        SubscriptionInfo info = subscription.get(i);
+        Log.d(TAG, "number " + info.getNumber());
+        Log.d(TAG, "network name : " + info.getCarrierName());
+        Log.d(TAG, "country iso " + info.getCountryIso());
+    }
+}
+```
 
 ## 教程
 - [Notifications codelab](https://developer.android.com/codelabs/advanced-android-kotlin-training-notifications#0)
