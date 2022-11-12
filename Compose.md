@@ -58,7 +58,18 @@ class MainActivity : ComponentActivity() {
 > 参考Stack Overflow的[回答](https://stackoverflow.com/questions/63971569/androidautosizetexttype-in-jetpack-compose)，快速使用可以查看【Brian】的回答，但是【Rahul Sainani】的回答感觉更标准一些。  
 ### Image
 #### 加载网络图片
-[stack overflow](https://stackoverflow.com/questions/58594262/how-do-i-load-url-into-image-into-drawimage-in-compose-ui-android-jetpack)
+[stack overflow](https://stackoverflow.com/questions/58594262/how-do-i-load-url-into-image-into-drawimage-in-compose-ui-android-jetpack)  
+  
+### Collapsing Toolbar
+#### 教程
+[Collapsing Toolbar in Jetpack Compose | Problem, solutions and alternatives](https://medium.com/kotlin-and-kotlin-for-android/collapsing-toolbar-in-jetpack-compose-problem-solutions-and-alternatives-34c9c5986ea0)  
+
+#### stackoverflow
+[Jetpack Compose collapsing toolbar](https://stackoverflow.com/questions/67227755/jetpack-compose-collapsing-toolbar)
+
+#### 第三方库
+[compose-collapsing-toolbar](https://github.com/onebone/compose-collapsing-toolbar)  
+  
 ## Material Design
 ### 获取组件大小
 #### TopAppBar默认高度
