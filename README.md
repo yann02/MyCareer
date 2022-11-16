@@ -276,6 +276,13 @@ try {
 }
 ```
 
+### 重启应用
+> 使用场景：比如我们在Application中需要初始化的库涉及到需要获取动态权限时，可以在应用中在用户授权完成后重启应用，以完成该库的初始化。  
+> 可以使用以下库完成应用重启。
+  
+- [ProcessPhoenix](https://github.com/JakeWharton/ProcessPhoenix)
+
+
 ## 设备信息
 ### 手机号获取
 > android从5.1开始支持多张sim卡 [官方说明](https://developer.android.com/about/versions/lollipop/android-5.1#multisim)  
@@ -296,6 +303,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
     }
 }
 ```
+
 
 ## 教程
 - [Notifications codelab](https://developer.android.com/codelabs/advanced-android-kotlin-training-notifications#0)
