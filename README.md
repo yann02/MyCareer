@@ -228,7 +228,7 @@ android {
   
 `signingConfigs.getByName("debug")`  
   
-如下所示：  
+完整示例：  
 ```Gradle
 android {
     ...
