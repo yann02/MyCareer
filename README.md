@@ -224,8 +224,11 @@ android {
 [解决AS build控制台乱码问题 参考2](https://blog.csdn.net/weixin_37826412/article/details/105555837)
    
 ### 给release配置一个临时的签名
-> 在使用release版本打包时，需要配置签名。如果我们只是想要临时体验release版本，可以使用以下的方式：  
+> 在使用release版本打包时，需要配置签名。如果我们只是想要临时体验release版本，只需在app gradle中要给release的signingConfig配置如下代码：
   
+`signingConfigs.getByName("debug")`  
+  
+如下所示：  
 ```Gradle
 android {
     ...
