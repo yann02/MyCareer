@@ -300,7 +300,25 @@ try {
 > 可以使用以下库完成应用重启。
   
 - [ProcessPhoenix](https://github.com/JakeWharton/ProcessPhoenix)
+  
+### 应用退出到后台
+> 使用场景：常用于在应用中打开系统悬浮窗时，返回到系统桌面，并且不销毁当前应用。  
+> 实现该功能有以下两种方式
 
+#### 将当前应用退出到后台运行
+> 调用activity的成员方法  
+`moveTaskToBack(true)`
+> 参数说明：如果当前activity是应用的启动activity，参数可以传false；反之，如果当前不是应用启动的activity，则传true。  
+
+#### 跳转到系统桌面
+> Kotlin代码如下所示：  
+  
+```Kotlin
+Intent(Intent.ACTION_MAIN).apply {
+    addCategory(Intent.CATEGORY_HOME)
+    flags = Intent.FLAG_ACTIVITY_NEW_TASK
+}.let { startActivity(it) }
+```
 
 ## 设备信息
 ### 手机号获取
