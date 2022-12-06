@@ -306,8 +306,10 @@ try {
 > 实现该功能有以下两种方式
 
 #### 将当前应用退出到后台运行
-> 调用activity的成员方法  
-`moveTaskToBack(true)`
+> 调用activity的成员方法    
+  
+`moveTaskToBack(true)`  
+  
 > 参数说明：如果当前activity是应用的启动activity，参数可以传false；反之，如果当前不是应用启动的activity，则传true。  
 
 #### 跳转到系统桌面
