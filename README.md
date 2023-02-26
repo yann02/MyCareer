@@ -347,3 +347,8 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 ## 教程
 - [Notifications codelab](https://developer.android.com/codelabs/advanced-android-kotlin-training-notifications#0)
 - [widgets udacity](https://learn.udacity.com/courses/ud855/lessons/c8efbed7-9c34-4d4f-bccc-ebd92d07a04f/concepts/f8a604be-06d3-4637-98ce-6f9da05fe08a)
+
+## 我的练习
+- Architecture Components
+  - Data lever libraries
+    - [Proto DataStore](https://github.com/yann02/ProtoDataStore)
