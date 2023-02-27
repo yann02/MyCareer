@@ -243,7 +243,10 @@ android {
 ```
 
 ### 查看依赖树结构
-> Gradle → app → Tasks → help → dependencies
+> Gradle → app → Tasks → help → dependencies  
+如下图所示：  
+<img src="images/checkout_dependencies_of_app.png" alt="微信应用信息">
+
 
 ## 音频和视频
 ### 录音
