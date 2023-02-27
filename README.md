@@ -242,6 +242,9 @@ android {
 }
 ```
 
+### 查看依赖树结构
+> Gradle → app → Tasks → help → dependencies
+
 ## 音频和视频
 ### 录音
 #### 使用的库
