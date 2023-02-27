@@ -243,12 +243,12 @@ android {
 ```
 
 ### 查看依赖树结构
-#### 不指定编译变体
+#### 查看所有编译类型
 > Gradle → app → Tasks → help → dependencies  
 如下图所示：  
 <img src="images/checkout_dependencies_of_app.png" alt="查看所有依赖图">
 
-#### 指定编译变体
+#### 指定编译类型
 > 在terminal控制台使用gradlaw指令，以下为debug编译类型的查看指令：  
 `./gradlew :app:dependencies --configuration debugCompileClasspath`  
 > 输出结果如下图所示：  
