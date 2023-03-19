@@ -227,6 +227,8 @@ android {
 > 在使用release版本打包时，需要配置签名。如果我们只是想要临时体验release版本，只需在app gradle中要给release的signingConfig配置如下代码：
   
 `signingConfigs.getByName("debug")`  
+or  
+`signingConfigs.debug`  
   
 完整示例：  
 ```Gradle
