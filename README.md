@@ -367,3 +367,8 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 - Architecture Components
   - Data lever libraries
     - [Proto DataStore](https://github.com/yann02/ProtoDataStore)
+    
+## Android开发不友好设备  
+### IQOO NEO5（VIVO）  
+- 对logcat控制台输出的特定类型数据内容进行了加密，无法查看到完整的信息。比如url就会被替换成星号“*”；  
+- 应用安装限制，每次安装应用都需要用户授权后才能安装。这样会影响macroBenchMark在测量应用冷启动时测量应用的迭代次数，无法顺利多次执行重复安装应用的模拟操作。
