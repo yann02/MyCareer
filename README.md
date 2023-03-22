@@ -4,7 +4,8 @@ My learning record for Android development.
 ---
   
 ## 查看安卓版本
-[官方的Android版本表](https://source.android.com/docs/setup/about/build-numbers)  
+- [官方的Android版本表](https://source.android.com/docs/setup/about/build-numbers)  
+- [Android版本表，含使用情况](https://apilevels.com/)
   
 ## 数据结构
 ### 可感知组件生命周期的数据结构
